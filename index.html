@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bushra Hoq | Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    header {
+      background: linear-gradient(-45deg, #2c3e50, #34495e, #5dade2, #85c1e9);
+      background-size: 600% 600%;
+      animation: bannerSlide 10s ease infinite;
+      color: white;
+      padding: 0.2rem 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      min-height: 80px;
+      line-height: 1;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .header-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      line-height: 1.2;
+    }
+    header img {
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      margin-bottom: 4px;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 998;
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+    nav a {
+      animation: fadeInNav 1.5s ease-in-out forwards;
+      opacity: 0;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background: #5dade2;
+    }
+    .content {
+      padding: 20px;
+    }
+    .dashboard-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 16px;
+      padding-bottom: 10px;
+    }
+    .dashboard-grid figure {
+      min-width: 300px;
+      flex-shrink: 0;
+      position: relative;
+      background: white;
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .dashboard-grid img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    .dashboard-title {
+      font-weight: bold;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+    .dashboard-grid figure:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      white-space: pre-line;
+      max-width: 90%;
+      z-index: 10;
+    }
+    .carousel {
+      max-width: 800px;
+      margin: auto;
+      background: #eaf2f8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .testimonial {
+      display: none;
+      text-align: center;
+    }
+    .testimonial.active {
+      display: block;
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    .testimonial-text {
+      font-size: 14px;
+    }
+    .dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+    .dot.active {
+      background-color: #3498db;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #2c3e50;
+      color: white;
+      font-size: 12px;
+    }
+    @keyframes bannerSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes fadeInNav {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="Profile.PNG" alt="Bushra Hoq">
+      <p>Data Analyst | BI Leader | Dashboard Expert</p>
+      <p class="email-linkedin" style="color: white;">bushra.hoq@gmail.com <a href="https://www.linkedin.com/in/bushra-hoq" style="color: white;" target="_blank">LinkedIn</a></p>
+    </div>
+  </header>
+  <nav>
+    <a href="profile.html" target="_blank">👤 Profile</a>
+    <a href="#dashboards">📈 Dashboards</a>
+    <a href="#recommendations">💬 Recommendations</a>
+    <a href="https://github.com/Bhoq" target="_blank">🐙 GitHub</a>
+    <a href="https://public.tableau.com/app/profile/bushrah" target="_blank">📊 Tableau</a>
+    <a href="https://youtube.com/@Tableautricksntip" target="_blank">📺 YouTube</a>
+    <a href="case-study.docx" download>📄 Case Study</a>
+    <a href="python-project.docx" download>🐍 Python Project</a>
+    <a href="Resume.docx" download>📃 Resume</a>
+</nav>
+  <div class="content" id="dashboards">
+    <h2>Dashboards</h2>
+    <div class="dashboard-grid">
+      <a href="ECdashboard.png" target="_blank">
+        <figure data-tooltip="Techniques used: Auto Navigation Panel, Selection, Bookmark, Figma, Parameters, Buttons, DAX, Filters, Parameters, Slicer, Custom Date table with dynamic title and Axis">
+          <img src="ECdashboard.png" alt="Executive Dashboard">
+          <figcaption class="dashboard-title">Executive Dashboard</figcaption>
+        </figure>
+      </a>
+      <a href="Energydashboard.png" target="_blank">
+        <figure data-tooltip="Energy consumption trends and efficiency insights.">
+          <img src="Energydashboard.png" alt="Energy Dashboard">
+          <figcaption class="dashboard-title">Energy Dashboard</figcaption>
+        </figure>
+      </a>
+      <a href="ServiceOverview.png" target="_blank">
+        <figure data-tooltip="Service health, incidents, and customer satisfaction KPIs.">
+          <img src="ServiceOverview.png" alt="Service Overview">
+          <figcaption class="dashboard-title">Service Overview</figcaption>
+        </figure>
+      </a>
+      <a href="CohortAnalysis.PNG" target="_blank">
+        <figure data-tooltip="Cohort retention analysis by signup date.">
+          <img src="CohortAnalysis.PNG" alt="Cohort Analysis">
+          <figcaption class="dashboard-title">Cohort Analysis</figcaption>
+        </figure>
+      </a>
+      <a href="LinearRegression.png" target="_blank">
+        <figure data-tooltip="Predictive modeling with regression fit line and R2.">
+          <img src="LinearRegression.png" alt="Linear Regression">
+          <figcaption class="dashboard-title">Linear Regression</figcaption>
+        </figure>
+      </a>
+      <a href="MultipleBMI.png" target="_blank">
+        <figure data-tooltip="KPI monitoring for multiple metrics in real-time.">
+          <img src="MultipleBMI.png" alt="Multiple KPI Monitor">
+          <figcaption class="dashboard-title">Multiple KPI Monitor</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+
+  <div class="content" id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="carousel">
+      <div class="testimonial active">
+        <img src="Cory Yeager.png" alt="Cory Yeager">
+        <div class="testimonial-text">
+          <p><strong>Cory Yeager</strong><br>"Bushra has consistently demonstrated exceptional skills and expertise as a Tableau Developer. Her contributions have been invaluable to our team's success."</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Farooq Ali.png" alt="Farooq Ali">
+        <div class="testimonial-text">
+          <p><strong>Farooq Ali</strong><br>"Bushra possesses a keen analytical mind and a strong ability to work with complex healthcare data. Her ability to collaborate and meet tight deadlines was commendable."</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Philip Shrader.png" alt="Philip Shrader">
+        <div class="testimonial-text">
+          <p><strong>Philip Shrader</strong><br>"Bushra always puts in the extra effort to develop concrete solutions. Her creativity with solving complex problems was a delight to work with."</p>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </div>

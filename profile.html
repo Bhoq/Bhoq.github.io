@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bushra Hoq | Profile</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom, #2c3e50, #34495e);
+      color: #f4f6f7;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: linear-gradient(135deg, #34495e, #2c3e50);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    h1 {
+      color: #ecf0f1;
+      font-size: 26px;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    .cert-badges {
+      display: flex;
+      gap: 10px;
+    }
+    .cert-badges img {
+      height: 50px;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    ul {
+      font-size: 16px;
+      line-height: 1.7;
+      padding-left: 25px;
+      color: #ecf0f1;
+    }
+    ul li {
+      margin-bottom: 12px;
+      opacity: 0;
+      transform: translateX(-25px);
+      animation: slideIn 0.6s ease forwards;
+    }
+    ul li:nth-child(1) { animation-delay: 0.2s; }
+    ul li:nth-child(2) { animation-delay: 0.4s; }
+    ul li:nth-child(3) { animation-delay: 0.6s; }
+    ul li:nth-child(4) { animation-delay: 0.8s; }
+    ul li:nth-child(5) { animation-delay: 1s; }
+    ul li:nth-child(6) { animation-delay: 1.2s; }
+    ul li:nth-child(7) { animation-delay: 1.4s; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 30px;
+      text-decoration: none;
+      background: #3498db;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.3s ease;
+    }
+    .back-link:hover {
+      background: #2c81ba;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      to { opacity: 1; transform: translateX(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Bushra Hoq – Professional Profile</h1>
+      <div class="cert-badges">
+        <img src="Tableau Badge.PNG" alt="Tableau Certified">
+        <img src="PBI Badge.PNG" alt="Power BI Certified">
+      </div>
+    </div>
+    <ul>
+      <li>12+ years of experience in Data Analysis and Dashboard Development.</li>
+      <li>Certified in Tableau, Power BI, Alteryx, AWS Data Collection & Storage, and Machine Learning with Python.</li>
+      <li>Proficient in SQL, BigQuery, Snowflake, Semantic Data Modeling, Microsoft Fabric, and Data Lakes.</li>
+      <li>Skilled in A/B Testing, Sales & Revenue Forecasting, Linear Regression, and Cohort Analysis.</li>
+      <li>Expertise in Gen AI, Prompt Engineering, and tools like Vertex AI and ThoughtSpot.</li>
+      <li>Holds a Bachelor’s in Computer Science and a Master’s in Information Systems.</li>
+      <li>Trained Project Management Associate with a passion for building interactive and dynamic analytics applications.</li>
+    </ul>
+    <a href="./index2.html" class="back-link">&larr; Back to Portfolio</a>
+  </div>
+</body>
+</html>
