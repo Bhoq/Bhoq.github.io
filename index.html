@@ -78,8 +78,8 @@
       padding-bottom: 10px;
     }
     .dashboard-grid figure {
-      flex: 0 0 auto;
-      width: 300px;
+      min-width: 300px;
+      flex-shrink: 0;
       position: relative;
       background: white;
       padding: 10px;
@@ -89,9 +89,7 @@
     }
     .dashboard-grid img {
       width: 100%;
-      height: auto;
       border-radius: 5px;
-      object-fit: contain;
     }
     .dashboard-title {
       font-weight: bold;
@@ -167,12 +165,6 @@
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    @media (max-width: 768px) {
-      .dashboard-grid figure {
-        width: 80vw;
-      }
-    }
   </style>
 </head>
 <body>
@@ -187,12 +179,18 @@
     <a href="profile.html" target="_blank">👤 Profile</a>
     <a href="#dashboards">📈 Dashboards</a>
     <a href="#recommendations">💬 Recommendations</a>
-  </nav>
+    <a href="https://github.com/Bhoq" target="_blank">🐙 GitHub</a>
+    <a href="https://public.tableau.com/app/profile/bushrah" target="_blank">📊 Tableau</a>
+    <a href="https://youtube.com/@Tableautricksntip" target="_blank">📺 YouTube</a>
+    <a href="case-study.docx" download>📄 Case Study</a>
+    <a href="python-project.docx" download>🐍 Python Project</a>
+    <a href="Resume.docx" download>📃 Resume</a>
+</nav>
   <div class="content" id="dashboards">
     <h2>Dashboards</h2>
     <div class="dashboard-grid">
       <a href="ECdashboard.png" target="_blank">
-        <figure data-tooltip="Executive Dashboard features with advanced DAX, bookmarks, slicers, buttons.">
+        <figure data-tooltip="Techniques used: Auto Navigation Panel, Selection, Bookmark, Figma, Parameters, Buttons, DAX, Filters, Parameters, Slicer, Custom Date table with dynamic title and Axis">
           <img src="ECdashboard.png" alt="Executive Dashboard">
           <figcaption class="dashboard-title">Executive Dashboard</figcaption>
         </figure>
@@ -216,13 +214,13 @@
         </figure>
       </a>
       <a href="LinearRegression.png" target="_blank">
-        <figure data-tooltip="Predictive modeling with regression line and R-squared.">
+        <figure data-tooltip="Predictive modeling with regression fit line and R2.">
           <img src="LinearRegression.png" alt="Linear Regression">
           <figcaption class="dashboard-title">Linear Regression</figcaption>
         </figure>
       </a>
       <a href="MultipleBMI.png" target="_blank">
-        <figure data-tooltip="KPI monitoring with filters, drilldowns, and bookmarks.">
+        <figure data-tooltip="KPI monitoring for multiple metrics in real-time.">
           <img src="MultipleBMI.png" alt="Multiple KPI Monitor">
           <figcaption class="dashboard-title">Multiple KPI Monitor</figcaption>
         </figure>
@@ -258,8 +256,3 @@
       </div>
     </div>
   </div>
-  <footer>
-    <p>&copy; 2025 Bushra Hoq. All rights reserved.</p>
-  </footer>
-</body>
-</html>
