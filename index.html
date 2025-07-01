@@ -78,8 +78,8 @@
       padding-bottom: 10px;
     }
     .dashboard-grid figure {
-      min-width: 300px;
-      flex-shrink: 0;
+      flex: 0 0 auto;
+      width: 300px;
       position: relative;
       background: white;
       padding: 10px;
@@ -89,6 +89,8 @@
     }
     .dashboard-grid img {
       width: 100%;
+      height: 200px;
+      object-fit: cover;
       border-radius: 5px;
     }
     .dashboard-title {
@@ -165,6 +167,11 @@
       from { opacity: 0; transform: translateY(-10px); }
       to { opacity: 1; transform: translateY(0); }
     }
+    @media (max-width: 768px) {
+      .dashboard-grid figure {
+        width: 80vw;
+      }
+    }
   </style>
 </head>
 <body>
@@ -185,7 +192,7 @@
     <a href="case-study.docx" download>📄 Case Study</a>
     <a href="python-project.docx" download>🐍 Python Project</a>
     <a href="Resume.docx" download>📃 Resume</a>
-</nav>
+  </nav>
   <div class="content" id="dashboards">
     <h2>Dashboards</h2>
     <div class="dashboard-grid">
@@ -227,7 +234,6 @@
       </a>
     </div>
   </div>
-
   <div class="content" id="recommendations">
     <h2>Recommendations</h2>
     <div class="carousel">
@@ -256,3 +262,8 @@
       </div>
     </div>
   </div>
+  <footer>
+    <p>&copy; 2025 Bushra Hoq. All rights reserved.</p>
+  </footer>
+</body>
+</html>
