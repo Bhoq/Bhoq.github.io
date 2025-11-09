@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    {
+      "name": "Cory Yeager",
+      "quote": "\"Bushra has consistently demonstrated exceptional skills and expertise as a Tableau Developer. Her contributions have been invaluable to our team's success.\"",
+      "image": "Cory Yeager.png",
+      "alt": "Cory Yeager"
+    },
+    {
+      "name": "Farooq Ali",
+      "quote": "\"Bushra possesses a keen analytical mind and a strong ability to work with complex healthcare data. Her ability to collaborate and meet tight deadlines was commendable.\"",
+      "image": "Farooq Ali.png",
+      "alt": "Farooq Ali"
+    },
+    {
+      "name": "Philip Shrader",
+      "quote": "\"Bushra always puts in the extra effort to develop concrete solutions. Her creativity with solving complex problems was a delight to work with.\"",
+      "image": "Philip Shrader.png",
+      "alt": "Philip Shrader"
+    }
+  ]
+}
