@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bushra Hoq | Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -26,17 +24,9 @@
       justify-content: center;
       gap: 2px;
       min-height: 80px;
-      line-height: 1;
-      transition: all 0.3s ease;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-    .header-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      line-height: 1.2;
-    }
+    .header-container { text-align: center; line-height: 1.2; }
     header img {
       border-radius: 50%;
       width: 60px;
@@ -46,17 +36,14 @@
     nav {
       position: sticky;
       top: 0;
-      z-index: 998;
       background: #34495e;
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
       gap: 10px;
       padding: 10px;
-      flex-wrap: wrap;
     }
     nav a {
-      animation: fadeInNav 1.5s ease-in-out forwards;
-      opacity: 0;
       color: white;
       text-decoration: none;
       font-size: 14px;
@@ -64,28 +51,22 @@
       border-radius: 4px;
       transition: background 0.3s;
     }
-    nav a:hover {
-      background: #5dade2;
-    }
-    .content {
-      padding: 20px;
-    }
+    nav a:hover { background: #5dade2; }
+    .content { padding: 20px; }
     .dashboard-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 16px;
-      padding-bottom: 10px;
     }
     .dashboard-grid figure {
-      flex: 0 0 auto;
       width: 300px;
-      position: relative;
       background: white;
       padding: 10px;
       border-radius: 10px;
       text-align: center;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: relative;
     }
     .dashboard-grid img {
       width: 100%;
@@ -93,52 +74,29 @@
       object-fit: cover;
       border-radius: 5px;
     }
-    .dashboard-title {
-      font-weight: bold;
-      font-size: 14px;
-      margin-top: 8px;
-    }
-    .dashboard-grid figure:hover::after {
-      content: attr(data-tooltip);
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: rgba(0, 0, 0, 0.8);
-      color: white;
-      padding: 10px;
-      border-radius: 5px;
-      font-size: 12px;
-      white-space: pre-line;
-      max-width: 90%;
-      z-index: 10;
-    }
+    .dashboard-title { font-weight: bold; margin-top: 8px; }
     .carousel {
       max-width: 800px;
       margin: auto;
       background: #eaf2f8;
       padding: 20px;
       border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .testimonial {
       display: none;
       text-align: center;
+      animation: fadeIn 0.5s ease;
     }
-    .testimonial.active {
-      display: block;
-    }
+    .testimonial.active { display: block; }
     .testimonial img {
       width: 60px;
       height: 60px;
       border-radius: 50%;
       margin-bottom: 10px;
     }
-    .testimonial-text {
-      font-size: 14px;
-    }
-    .dots {
-      text-align: center;
-      margin-top: 10px;
-    }
+    .testimonial-text { font-size: 14px; }
+    .dots { text-align: center; margin-top: 10px; }
     .dot {
       height: 10px;
       width: 10px;
@@ -148,9 +106,7 @@
       display: inline-block;
       cursor: pointer;
     }
-    .dot.active {
-      background-color: #3498db;
-    }
+    .dot.active { background-color: #3498db; }
     footer {
       text-align: center;
       padding: 15px;
@@ -163,14 +119,9 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    @keyframes fadeInNav {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @media (max-width: 768px) {
-      .dashboard-grid figure {
-        width: 80vw;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
@@ -179,13 +130,15 @@
     <div class="header-container">
       <img src="Profile.PNG" alt="Bushra Hoq">
       <p>Data Analyst | BI Leader | Dashboard Expert</p>
-      <p class="email-linkedin" style="color: white;">bushra.hoq@gmail.com <a href="https://www.linkedin.com/in/bushra-hoq" style="color: white;" target="_blank">LinkedIn</a></p>
+      <p class="email-linkedin" style="color: white;">bushra.hoq@gmail.com 
+        <a href="https://www.linkedin.com/in/bushra-hoq" style="color: white;" target="_blank">LinkedIn</a>
+      </p>
     </div>
   </header>
+
   <nav>
     <a href="profile.html" target="_blank">👤 Profile</a>
     <a href="#dashboards">📈 Dashboards</a>
-    <a href="#powerbi">🟦 Power BI</a>
     <a href="#recommendations">💬 Recommendations</a>
     <a href="https://github.com/Bhoq" target="_blank">🐙 GitHub</a>
     <a href="https://public.tableau.com/app/profile/bushrah" target="_blank">📊 Tableau</a>
@@ -194,11 +147,12 @@
     <a href="python-project.docx" download>🐍 Python Project</a>
     <a href="Resume.docx" download>📃 Resume</a>
   </nav>
+
   <div class="content" id="dashboards">
     <h2>Dashboards</h2>
     <div class="dashboard-grid">
       <a href="ECdashboard.png" target="_blank">
-        <figure data-tooltip="Techniques used: Auto Navigation Panel, Selection, Bookmark, Figma, Parameters, Buttons, DAX, Filters, Parameters, Slicer, Custom Date table with dynamic title and Axis">
+        <figure data-tooltip="Auto Navigation Panel, Selection, Bookmark, Figma, DAX, Filters, Slicer, dynamic title.">
           <img src="ECdashboard.png" alt="Executive Dashboard">
           <figcaption class="dashboard-title">Executive Dashboard</figcaption>
         </figure>
@@ -222,7 +176,7 @@
         </figure>
       </a>
       <a href="LinearRegression.png" target="_blank">
-        <figure data-tooltip="Predictive modeling with regression fit line and R2.">
+        <figure data-tooltip="Predictive modeling with regression fit line and R².">
           <img src="LinearRegression.png" alt="Linear Regression">
           <figcaption class="dashboard-title">Linear Regression</figcaption>
         </figure>
@@ -235,22 +189,62 @@
       </a>
     </div>
   </div>
-  <div class="content" id="powerbi">
-    <h2>Power BI</h2>
-    <a href="assets/powerbi-ec-dashboard.png" target="_blank">
-      <figure data-tooltip="Executive summary of KPIs in Power BI (EC Dashboard). Click to view full size.">
-        <img src="assets/powerbi-ec-dashboard.png" alt="EC Dashboard (Power BI)">
-        <figcaption class="dashboard-title">EC Dashboard (Power BI)</figcaption>
-      </figure>
-    </a>
-  </div>
 
   <div class="content" id="recommendations">
     <h2>Recommendations</h2>
-    <div class="carousel" data-src="assets/recommendations.json"></div>
+    <div class="carousel">
+      <div class="testimonial active">
+        <img src="Cory Yeager.png" alt="Cory Yeager">
+        <div class="testimonial-text">
+          <p><strong>Cory Yeager</strong><br>
+          “Bushra consistently demonstrates exceptional skill and professionalism. Her Tableau expertise elevated our analytics game.”</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Farooq Ali.png" alt="Farooq Ali">
+        <div class="testimonial-text">
+          <p><strong>Farooq Ali</strong><br>
+          “Bushra’s data storytelling and strategic insights helped shape major business decisions. Highly reliable and innovative.”</p>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="Philip Shrader.png" alt="Philip Shrader">
+        <div class="testimonial-text">
+          <p><strong>Philip Shrader</strong><br>
+          “Her creative problem-solving and dashboard automation saved countless hours for our reporting teams.”</p>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
   </div>
+
   <footer>
     <p>&copy; 2025 Bushra Hoq. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Simple JS for testimonial rotation
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    let current = 0;
+
+    function showTestimonial(index) {
+      testimonials[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      current = (index + testimonials.length) % testimonials.length;
+      testimonials[current].classList.add('active');
+      dots[current].classList.add('active');
+    }
+
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => showTestimonial(i));
+    });
+
+    setInterval(() => showTestimonial(current + 1), 6000);
+  </script>
 </body>
 </html>
