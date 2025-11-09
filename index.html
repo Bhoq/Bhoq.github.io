@@ -155,4 +155,102 @@
       text-align: center;
       padding: 15px;
       background: #2c3e50;
-      col
+      color: white;
+      font-size: 12px;
+    }
+    @keyframes bannerSlide {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes fadeInNav {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 768px) {
+      .dashboard-grid figure {
+        width: 80vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="Profile.PNG" alt="Bushra Hoq">
+      <p>Data Analyst | BI Leader | Dashboard Expert</p>
+      <p class="email-linkedin" style="color: white;">bushra.hoq@gmail.com <a href="https://www.linkedin.com/in/bushra-hoq" style="color: white;" target="_blank">LinkedIn</a></p>
+    </div>
+  </header>
+  <nav>
+    <a href="profile.html" target="_blank">👤 Profile</a>
+    <a href="#dashboards">📈 Dashboards</a>
+    <a href="#powerbi">🟦 Power BI</a>
+    <a href="#recommendations">💬 Recommendations</a>
+    <a href="https://github.com/Bhoq" target="_blank">🐙 GitHub</a>
+    <a href="https://public.tableau.com/app/profile/bushrah" target="_blank">📊 Tableau</a>
+    <a href="https://youtube.com/@Tableautricksntip" target="_blank">📺 YouTube</a>
+    <a href="case-study.docx" download>📄 Case Study</a>
+    <a href="python-project.docx" download>🐍 Python Project</a>
+    <a href="Resume.docx" download>📃 Resume</a>
+  </nav>
+  <div class="content" id="dashboards">
+    <h2>Dashboards</h2>
+    <div class="dashboard-grid">
+      <a href="ECdashboard.png" target="_blank">
+        <figure data-tooltip="Techniques used: Auto Navigation Panel, Selection, Bookmark, Figma, Parameters, Buttons, DAX, Filters, Parameters, Slicer, Custom Date table with dynamic title and Axis">
+          <img src="ECdashboard.png" alt="Executive Dashboard">
+          <figcaption class="dashboard-title">Executive Dashboard</figcaption>
+        </figure>
+      </a>
+      <a href="Energydashboard.png" target="_blank">
+        <figure data-tooltip="Energy consumption trends and efficiency insights.">
+          <img src="Energydashboard.png" alt="Energy Dashboard">
+          <figcaption class="dashboard-title">Energy Dashboard</figcaption>
+        </figure>
+      </a>
+      <a href="ServiceOverview.png" target="_blank">
+        <figure data-tooltip="Service health, incidents, and customer satisfaction KPIs.">
+          <img src="ServiceOverview.png" alt="Service Overview">
+          <figcaption class="dashboard-title">Service Overview</figcaption>
+        </figure>
+      </a>
+      <a href="CohortAnalysis.PNG" target="_blank">
+        <figure data-tooltip="Cohort retention analysis by signup date.">
+          <img src="CohortAnalysis.PNG" alt="Cohort Analysis">
+          <figcaption class="dashboard-title">Cohort Analysis</figcaption>
+        </figure>
+      </a>
+      <a href="LinearRegression.png" target="_blank">
+        <figure data-tooltip="Predictive modeling with regression fit line and R2.">
+          <img src="LinearRegression.png" alt="Linear Regression">
+          <figcaption class="dashboard-title">Linear Regression</figcaption>
+        </figure>
+      </a>
+      <a href="MultipleBMI.png" target="_blank">
+        <figure data-tooltip="KPI monitoring for multiple metrics in real-time.">
+          <img src="MultipleBMI.png" alt="Multiple KPI Monitor">
+          <figcaption class="dashboard-title">Multiple KPI Monitor</figcaption>
+        </figure>
+      </a>
+    </div>
+  </div>
+  <div class="content" id="powerbi">
+    <h2>Power BI</h2>
+    <a href="assets/powerbi-ec-dashboard.png" target="_blank">
+      <figure data-tooltip="Executive summary of KPIs in Power BI (EC Dashboard). Click to view full size.">
+        <img src="assets/powerbi-ec-dashboard.png" alt="EC Dashboard (Power BI)">
+        <figcaption class="dashboard-title">EC Dashboard (Power BI)</figcaption>
+      </figure>
+    </a>
+  </div>
+
+  <div class="content" id="recommendations">
+    <h2>Recommendations</h2>
+    <div class="carousel" data-src="assets/recommendations.json"></div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Bushra Hoq. All rights reserved.</p>
+  </footer>
+</body>
+</html>
